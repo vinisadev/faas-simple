@@ -1,0 +1,28 @@
+{
+  "name": "faas-simple",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Vincenzo Fehring <vinfehring@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "uuid": "^11.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.8.4",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

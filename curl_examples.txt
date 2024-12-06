@@ -1,0 +1,31 @@
+Execute a function:
+
+curl --request POST \
+  --url http://localhost:3000/execute/c44eccd2-e6b7-4030-91f6-839d42c1b1b0 \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/10.1.1' \
+  --data '{
+	"a": 1,
+	"b": 1
+}'
+
+
+Get all Functions:
+
+curl --request GET \
+  --url http://localhost:3000/functions \
+  --header 'User-Agent: insomnia/10.1.1'
+
+
+Create a Function:
+
+curl --request POST \
+  --url http://localhost:3000/register \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/10.1.1' \
+  --data '{
+	"name": "javascript-test",
+	"language": "javascript",
+	"code": "function add(input) { const { a, b } = JSON.parse(input); return JSON.stringify({ result: a + b }); } const result = add(process.argv[2]); console.log(result);",
+	"entryPoint": "javascript-test"
+}'
